@@ -1,0 +1,55 @@
+.c-client-wishes{
+	background-color: @gray;
+
+	.c-page-wrapper {
+		position: relative;
+		min-height: 510px;
+		display: flex;
+		background-color: @gray;
+
+		@media (max-width: @screen-lg) {
+			overflow: hidden;
+		}
+
+		@media (max-width: @screen-md) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 53%;
+
+		@media (max-width: @screen-lg) {
+			width: 56%;
+			right: -90px;
+		}
+
+		@media (max-width: @screen-md) {
+			position: static;
+			width: auto;
+		}
+	}
+
+	&__inner {
+		min-height: 510px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__info {
+		max-width: 520px;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 32px;
+		padding-top: 100px;
+		margin-bottom: 28px;
+		background-image: url("/images/medal.png");
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+}

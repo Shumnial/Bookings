@@ -1,0 +1,79 @@
+.c-steps{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__inner {
+		min-height: 425px;
+		max-width: 1130px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+	}
+
+	&__info {
+		position: relative;
+		max-width: 380px;
+		font-size: 20px;
+		padding-top: 85px;
+
+		&--align {
+			text-align: right;
+		}
+
+		span {
+			position: absolute;
+			width: 66px;
+			height: 66px;
+			top: 0;
+			font-size: 44.47px;
+			font-weight: 300;
+			color: @orange;
+
+			&::before {
+				position: absolute;
+				content: '';
+				top: -3px;
+				width: 66px;
+				height: 66px;
+				border: 2px solid @orange;
+				border-radius: 50%;
+			}
+		}
+
+		&:nth-child(1n) span {
+			// Стили для номера 1 и 3
+			right: 30px;
+
+			&::before {
+				right: -20px;
+			}
+		}
+
+		&:nth-child(1) span {
+
+			&::before {
+				right: -25px;
+			}
+		}
+
+		&:nth-child(2n) span {
+			// Стили для номера 2 и 4
+			left: 0;
+			padding-left: 23px;
+
+			&::before {
+				left: 2px;
+			}
+		}
+
+		a {
+			display: block;
+			color: @green;
+			width: 230px;
+			margin-left: auto;
+			box-shadow: 0 2px 0 0 #79bdb8;
+		}
+	}
+}

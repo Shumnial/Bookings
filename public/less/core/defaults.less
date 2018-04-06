@@ -1,0 +1,51 @@
+// this file for the defaults styles, such as <body> or <a> for example...
+html {
+	font-size: @base-font-size;
+}
+
+body {
+	font-family: @base-font;
+	color: @black;
+	background-color: @base-bg-color;
+	line-height: @base-line-height;
+	font-style: normal;
+	font-weight: @base-font-weight;
+	-webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: @base-box-model;
+}
+
+.btn {
+	color: white;
+	background-color: @orange;
+}
+
+.btn--large {
+	display: block;
+	position: relative;
+	width: 410px;
+	font-size: 20px;
+	font-weight: 300;
+	padding: 19px 33px;
+	padding-right: 65px;
+	background-image: url("/images/check.png");
+	background-position: center right 33px;
+	background-repeat: no-repeat;
+}
+
+.line-weight {
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}

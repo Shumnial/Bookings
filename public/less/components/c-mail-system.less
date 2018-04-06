@@ -1,0 +1,65 @@
+.c-mail-system{
+
+	.c-page-wrapper {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+
+		@media (max-width: @screen-lg) {
+			overflow: hidden;
+		}
+
+		@media (max-width: @screen-md) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media (max-width: @screen-sm) {
+			
+		}
+
+		@media (max-width: @screen-xs) {
+			
+		}
+	}
+
+	&__image {
+		position: absolute;
+		bottom: 0px;
+		left: -102px;
+		
+		@media (max-width: @screen-md) {
+			position: static;
+		}
+
+		@media (max-width: @screen-sm) {
+			
+		}
+
+		@media (max-width: @screen-xs) {
+			
+		}
+	}
+
+	&__inner {
+		min-height: 520px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: @screen-md) {
+			min-height: 350px;
+		}
+	}
+
+	&__info {
+		max-width: 575px;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 32px;
+		padding-top: 80px;
+		padding-right: 80px;
+		background-image: url("/images/envelope.png");
+		background-position: top left;
+		background-repeat: no-repeat;
+	}
+}

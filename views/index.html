@@ -1,0 +1,143 @@
+{% extends layout %}
+{% block content %}
+	<!-- <section class="l-section">
+		<div class="l-container">
+		<h1>Переменные</h1>
+		{{ Macros.Icon('i-instagram') }}
+		<ul>
+			<li>Инлайн ( на текущей странице ) => {{ locals.title }}</li>
+			<li>Локальная ( для текущей странице ) => {{ locals.description }}</li>
+			<li>Глобальная ( для всех страниц ) => {{ common.data.title }}</li>
+			<img src="{{ storage ~ 'images/1.png' }}" alt="">
+		</ul>
+	</div>
+	</section>
+-->
+<header class="c-page-header">
+	<nav class="c-main-nav">
+		<div class="c-page-wrapper">
+			<img src="{{ 'logo.png' | img_asset }}" alt="logo">
+			<div class="c-main-nav__links">
+				{% for item in common.data.contacts %}
+				<a class="c-main-nav__link c-main-nav__link--tel" href="tel:{{item.telHref}}">{{item.tel}}</a>
+				<a class="c-main-nav__link c-main-nav__link--email" href="mailto:pr@iron-neo.com">{{item.email}}</a> {% endfor %}
+				<a class="c-main-nav__link c-main-nav__link--callback btn" href="#">Заказать звонок</a>
+			</div>
+		</div>
+	</nav>
+	<section class="c-about-platform">
+		<div class="c-page-wrapper">
+			<section class="c-about-platform__inner">
+				<h1 class="c-about-platform__title">Microsoft Bookings</h1>
+				<p class="c-about-platform__info">Простая и современная платформа онлайн-записи клиентов, позволяющая распределить загрузку между вашими сотрудниками и повысить качество сервиса</p>
+				<a class="c-about-platform__application btn btn--large" href="#">Оставить заявку на консультацию</a>
+				<a class="c-about-platform__example" href="#">Посмотреть пример</a>
+			</section>
+			<img class="c-about-platform__image" src="/images/phoneandnote.png" alt="Phone and Notebook">
+		</div>
+	</section>
+</header>
+<main>
+	<section class="c-low-price">
+		<div class="c-page-wrapper">
+			<img class="c-low-price__image" src="/images/book.png" alt="Book">
+			<div class="c-low-price__inner">
+				<h2 class="c-low-price__title">Всего за 780 р/месяц вы получите эффективный инструмент для развития вашего бизнеса</h2>
+			</div>
+		</div>
+	</section>
+	<section class="c-timetable">
+		<div class="c-page-wrapper">
+			<div class="c-timetable__inner">
+				<p class="c-timetable__info"><span class="line-weight">Количество записи возрастет,</span> ведь клиенты будут видеть актуальный график сотрудников, и смогут самостоятельно забронировать визит на любое удобное время.</p>
+			</div>
+			<img class="c-timetable__image" src="/images/timetable.png" alt="Timetable">
+		</div>
+	</section>
+	<section class="c-mail-system">
+		<div class="c-page-wrapper">
+			<div class="c-mail-system__inner">
+				<p class="c-mail-system__info"><span class="line-weight">Неявка снизится, а работа администратора станет проще</span> за счет встроенной почтовой системы, которая вовремя оповестит клиентов о предстоящей записи.</p>
+			</div>
+			<img class="c-mail-system__image" src="/images/mailsystem.png" alt="Mail System">
+		</div>
+	</section>
+	<section class="c-client-wishes">
+		<div class="c-page-wrapper">
+			<div class="c-client-wishes__inner">
+				<p class="c-client-wishes__info"><span class="line-weight">Качество сервиса выйдет на новый уровень:</span> в этом поможет электронная база, в которой можно учитывать пожелания и предпочтения каждого клиента.</p>
+				<a class="c-client-wishes__application btn btn--large" href="#">Оставить заявку на консультацию</a>
+			</div>
+			<img class="c-client-wishes__image" src="/images/wishes.png" alt="Client wishes">
+		</div>
+	</section>
+	<section class="c-how-works">
+		<div class="c-page-wrapper">
+			<h2 class="c-how-works__title">Как именно работает сервис? Узнайте в ролике</h2>
+			<video class="c-how__works__video" src="#" poster="{{ 'video-preview.jpg' | img_asset }}"></video>
+		</div>
+	</section>
+	<section class="c-help">
+		<div class="c-page-wrapper">
+			<h2 class="c-help__title">Поможем вам пройти все этапы внедрения и настройки платформы</h2>
+			<div class="c-steps">
+				<div class="c-steps__inner">
+					<p class="c-steps__info c-steps__info--align"><span>1</span><a href="#">Оставьте заявку на сайте</a>Наш менеджер свяжется с вами и&nbsp;покажет возможности платформы.</p>
+					<p class="c-steps__info"><span>2</span>Зарегистрируем личный кабинет и&nbsp;вместе заполним информацию об&nbsp;услугах, мастерах и стоимости</p>
+					<p class="c-steps__info c-steps__info--align"><span>3</span>Подскажем, как привлечь на сайт максимальное количество пользователей</p>
+					<p class="c-steps__info"><span>4</span>После запуска проконсультируем по&nbsp;всем вопросам.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="c-application">
+		<div class="c-page-wrapper">
+			<h2 class="c-application__title">Мы поможем вывести ваш&nbsp;сервис на новый уровень!</h2>
+			<a class="c-application__application btn btn--large" href="#">Оставить заявку на консультацию</a>
+		</div>
+	</section>
+</main>
+<footer class="c-page-footer">
+	<div class="c-page-wrapper">
+		<section class="c-copyright">
+			{% for item in common.data.contacts %}
+			<a class="c-copyright__tel" href="tel:{{item.telHref}}">{{item.tel}}</a>
+			<a class="c-copyright__email"href="mailto:pr@iron-neo.com">{{item.email}}</a>
+			{% endfor %}
+			<p class="c-copyright__info">ООО Айрон Нео | Iron Neo LLC</p>
+			<p class="c-copyright__info">© 2018 Iron Neo LLC</p>
+		</section>
+		<section class="c-social">
+			<a class="c-social__link" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-facebook"></use>
+				</svg>
+			</a>
+			<a class="c-social__link" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-instagram"></use>
+				</svg>
+			</a>
+			<a class="c-social__link" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-linkedin2"></use>
+				</svg>
+			</a>
+			<a class="c-social__link" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-vk"></use>
+				</svg>
+			</a>
+			<a class="c-social__link" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-twitter"></use>
+				</svg>
+			</a>
+			<a class="c-social__link" href="#">Google+</a>
+			<a class="c-social__link" href="#">t</a>
+			<a class="c-social__link" href="#">Telegram</a>
+		</section>
+		<img class="c-page-footer__logo" src="{{ 'mslogo-gold.png' | img_asset }}" alt="Microsoft logo" width="237" height="81">
+	</div>
+</footer>
+{% endblock %}

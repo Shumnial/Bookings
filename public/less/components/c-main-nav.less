@@ -1,0 +1,68 @@
+.c-main-nav{
+	.c-page-wrapper {
+		min-height: 95px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__links {
+		padding: 37px 0;
+
+		@media (max-width: @screen-xs) {
+			padding: 20px 0;
+		}
+	}
+
+	&__link {
+		font-size: 18px;
+		font-weight: 400;
+
+		@media (max-width: @screen-xs) {
+			display: block;
+			text-align: center;
+		}
+
+		&--tel {
+			position: relative;
+			color: @black;
+			padding-right: 12px;
+			margin-right: 6px;
+
+			@media (max-width: @screen-xs) {
+				padding-right: 0;
+				margin-right: 0;
+				margin-bottom: 5px;
+			}
+
+
+			&::before {
+				position: absolute;
+				content: '';
+				top: 5px;
+				right: 0;
+				width: 2px;
+				height: 18px;
+				background-color: #ddd;
+
+				@media (max-width: @screen-xs) {
+					display: none;
+				}
+			}
+		}
+		&--email {
+			color: @green;
+			margin-right: 14px;
+
+			@media (max-width: @screen-xs) {
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+		&--callback {
+			font-size: 18px;
+			font-weight: 300;
+			padding: 11px 24px;
+		}
+	}
+}

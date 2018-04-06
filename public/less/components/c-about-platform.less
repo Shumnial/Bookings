@@ -1,0 +1,89 @@
+.c-about-platform{ 
+	background-color: @gray;
+
+	.c-page-wrapper {
+		position: relative;
+		min-height: 590px;
+		display: flex;
+		background-color: @gray;
+
+		@media (max-width: @screen-lg) {
+			overflow: hidden;
+		}
+
+		@media (max-width: @screen-md) {
+			flex-direction: column;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 60px;
+		right: 0;
+		width: 55%;
+
+		@media (max-width: @screen-lg) {
+			width: auto;
+			top: 41px;
+			right: -158px;
+		}
+
+		@media (max-width: @screen-md) {
+			position: static;
+		}
+	}
+
+	&__inner {
+		max-width: 475px;
+		padding-top: 118px;
+
+		@media (max-width: @screen-md) {
+			max-width: 420px;
+			padding-top: 60px;
+			margin: 0 auto;
+			margin-bottom: 40px;
+		}
+
+	}
+
+	&__title {
+		font-size: 50px;
+		font-weight: 600;
+		margin-bottom: 16px;
+
+		@media (max-width: @screen-xs) {
+			font-size: 45px;
+		}
+	}
+
+	&__info {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 30px;
+		margin-bottom: 26px;
+	}
+
+	&__application {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	&__example {
+		position: relative;
+		font-size: 20px;
+		color: @green;
+		padding-right: 40px;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 3px;
+			right: 10px;
+			width: 21px;
+			height: 21px;
+			background-image: url("/images/square.png");
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+}
