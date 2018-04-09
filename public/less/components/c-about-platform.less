@@ -5,54 +5,61 @@
 		position: relative;
 		min-height: 590px;
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		background-color: @gray;
 
-		@media (max-width: @screen-lg) {
-			overflow: hidden;
+		@media (min-width: @screen-desktop) {
 		}
 
-		@media (max-width: @screen-md) {
-			flex-direction: column;
+		@media (min-width: @screen-lg-desktop) {
+			align-items: flex-start;
+			flex-direction: row;
 		}
 	}
 
 	&__image {
-		position: absolute;
-		top: 60px;
-		right: 0;
-		width: 55%;
+		height: 300px;
 
-		@media (max-width: @screen-lg) {
-			width: auto;
-			top: 41px;
-			right: -158px;
+		@media (min-width: @screen-tablet) {
+			height: 450px;
 		}
 
-		@media (max-width: @screen-md) {
-			position: static;
+		@media (min-width: @screen-desktop) {
+			height: auto;
+		}
+
+		@media (min-width: @screen-lg-desktop) {
+			position: absolute;
+			top: 60px;
+			right: 0;
+			width: 55%;
+			height: auto;
+			/* width: auto;
+			top: 41px;
+			right: -207px; */
 		}
 	}
 
 	&__inner {
-		max-width: 475px;
-		padding-top: 118px;
+		max-width: 420px;
+		padding-top: 60px;
+		margin-bottom: 40px;
 
-		@media (max-width: @screen-md) {
-			max-width: 420px;
-			padding-top: 60px;
-			margin: 0 auto;
-			margin-bottom: 40px;
+		@media (min-width: @screen-tablet) {
+			max-width: 475px;
+			padding-top: 118px;
 		}
 
 	}
 
 	&__title {
-		font-size: 50px;
-		font-weight: 600;
-		margin-bottom: 16px;
+		font-size: 45px;
 
-		@media (max-width: @screen-xs) {
-			font-size: 45px;
+		@media (min-width: @screen-tablet) {
+			font-size: 50px;
+			font-weight: 600;
+			margin-bottom: 16px;
 		}
 	}
 

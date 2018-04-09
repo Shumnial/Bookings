@@ -7,20 +7,24 @@
 		flex-direction: column;
 		align-items: center;
 		padding-top: 48px;
-		padding-bottom: 20px;
+		padding-bottom: 40px;
 		background-color: @gray;
+
+		@media (min-width: @screen-tablet) {
+			padding-bottom: 20px;
+		}
 	}
 
 	&__title {
+		max-width: 100%;
 		display: block;
 		text-align: center;
-		max-width: 650px;
 		font-size: 40px;
 		font-weight: 600;
 		margin-bottom: 38px;
 
-		@media (max-width: @screen-sm) {
-			max-width: 100%;
+		@media (min-width: @screen-tablet) {
+			max-width: 650px;
 		}
 	}
 }

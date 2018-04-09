@@ -2,15 +2,15 @@
 	background-color: @green;
 
 	.c-page-wrapper {
+		max-width: 730px;
 		min-height: 708px;
-		display: flex;
 		flex-direction: column;
 		align-items: center;
 		background-color: @green;
 	}
 
 	&__title {
-		max-width: 700px;
+		max-width: 100%;
 		font-size: 40px;
 		font-weight: 600;
 		color: white;
@@ -18,14 +18,23 @@
 		padding-top: 70px;
 		margin-bottom: 35px;
 
-		@media (max-width: @screen-sm) {
-			max-width: 100%;
+		@media (min-width: @screen-desktop) {
+			max-width: 700px;
 		}
 	}
 
 	&__video {
-		width: 100%;
-		max-width: 730px;
-		height: 412px;
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
 }

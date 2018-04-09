@@ -1,9 +1,21 @@
 .c-social{
-	width: 375px;
+	max-width: 180px;
 	min-height: 95px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: 7px;
+	padding-top: 14px;
+	order: 2;
+
+	@media (min-width: @screen-tablet) {
+		order: 1;
+	}
+
+	@media (min-width: @screen-desktop) {
+		flex-wrap: nowrap;
+		max-width: none;
+		width: 375px;
+	}
 
 	&__link {
 		position: relative;
@@ -11,6 +23,7 @@
 		font-size: 0;
 		width: 38px;
 		height: 38px;
+		margin-bottom: 5px;
 		border-radius: 50%;
 		background-color: @gray;
 		background-size: 16px;

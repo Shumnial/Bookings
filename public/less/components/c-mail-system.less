@@ -1,57 +1,55 @@
 .c-mail-system{
 
+
 	.c-page-wrapper {
 		position: relative;
 		display: flex;
-		justify-content: flex-end;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 50px;
 
-		@media (max-width: @screen-lg) {
-			overflow: hidden;
+		@media (min-width: @screen-tablet) {
+			justify-content: center;
 		}
 
-		@media (max-width: @screen-md) {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		@media (max-width: @screen-sm) {
-			
-		}
-
-		@media (max-width: @screen-xs) {
-			
+		@media (min-width: @screen-desktop) {
+			justify-content: space-between;
+			align-items: flex-end;
+			padding-top: 151px;
 		}
 	}
 
 	&__image {
-		position: absolute;
-		bottom: 0px;
-		left: -102px;
-		
-		@media (max-width: @screen-md) {
+		height: 250px;
+
+		@media (min-width: @screen-tablet) {
 			position: static;
+			height: auto;
 		}
 
-		@media (max-width: @screen-sm) {
-			
+		@media (min-width: @screen-desktop) {
+			position: absolute;
+			bottom: 0px;
+			left: -402px;
 		}
 
-		@media (max-width: @screen-xs) {
-			
+		@media (min-width: @screen-lg-desktop) {
+			left: 0px;
+			width: 48%;
 		}
 	}
 
 	&__inner {
-		min-height: 520px;
-		display: flex;
-		align-items: center;
+		max-width: 100%;
+		margin-bottom: 30px;
+		min-height: 260px;
 
-		@media (max-width: @screen-md) {
-			min-height: 350px;
+		@media (min-width: @screen-desktop) {
+			min-height: 290px;
 		}
 
-		@media (max-width: @screen-xs) {
-			max-width: 100%;
+		@media (min-width: @screen-lg-desktop) {
+			min-height: 338px;
 		}
 	}
 

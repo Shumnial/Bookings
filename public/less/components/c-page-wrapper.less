@@ -1,21 +1,21 @@
 .c-page-wrapper{
-	width: 1175px;
-	padding: 0 52.5px;
+	width: 440px;
+	padding: 0 20px;
 	margin: 0 auto;
 	box-sizing: content-box;
 
-	@media (max-width: @screen-md) {
-		width: 892px;
-		padding: 0 50px;
-	}
-
-	@media (max-width: @screen-sm) {
+	@media (min-width: @screen-tablet) {
 		width: 668px;
 		padding: 0 50px;
 	}
 
-	@media (max-width: @screen-xs) {
-		width: 440px;
-		padding: 0 20px;
+	@media (min-width: @screen-desktop) {
+		width: 892px;
+		padding: 0 50px;
+	}
+
+	@media (min-width: @screen-lg-desktop) {
+		width: 1175px;
+		padding: 0 52px;
 	}
 }

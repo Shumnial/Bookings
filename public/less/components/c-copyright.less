@@ -1,9 +1,16 @@
 .c-copyright{
-	max-width: 237px;
+	width: 237px;
 	display: flex;
 	flex-direction: column;
-	padding-top: 13px;
-	padding-left: 3px;
+	padding-top: 28px;
+	
+	text-align: center;
+	order: 3;
+
+	@media (min-width: @screen-tablet) {
+		text-align: left;
+		order: 1;
+	}
 
 	a {
 		display: block;
