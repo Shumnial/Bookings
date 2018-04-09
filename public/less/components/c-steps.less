@@ -10,6 +10,18 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-content: space-between;
+
+		@media (max-width: @screen-md) {
+			max-width: 900px;
+		}
+
+		@media (max-width: @screen-sm) {
+			flex-direction: column;	
+		}
+
+		@media (max-width: @screen-xs) {
+			
+		}
 	}
 
 	&__info {
@@ -17,6 +29,19 @@
 		max-width: 380px;
 		font-size: 20px;
 		padding-top: 85px;
+
+		@media (max-width: @screen-md) {
+			max-width: 320px;
+		}
+
+		@media (max-width: @screen-sm) {
+			max-width: 320px;
+			margin-bottom: 40px;
+		}
+
+		@media (max-width: @screen-xs) {
+			
+		}
 
 		&--align {
 			text-align: right;

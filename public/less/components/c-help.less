@@ -9,6 +9,10 @@
 		background-image: url("/images/phone.png");
 		background-repeat: no-repeat;
 		background-position: bottom 106px center;
+
+		@media (max-width: @screen-sm) {
+			background-image: none;
+		}
 	}
 
 	&__title {
@@ -18,5 +22,9 @@
 		text-align: center;
 		padding-top: 85px;
 		margin-bottom: 78px;
+
+		@media (max-width: @screen-sm) {
+			max-width: 100%;
+		}
 	}
 }
