@@ -1132,16 +1132,16 @@ img {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
   padding-top: 50px;
+  background-color: #f0f0f0;
 }
 @media (min-width: 768px) {
   .c-timetable .c-page-wrapper {
+    -ms-flex-align: center;
+        align-items: center;
     -ms-flex-direction: column;
         flex-direction: column;
     position: relative;
-    background-color: #f0f0f0;
   }
 }
 @media (min-width: 992px) {
@@ -1194,14 +1194,12 @@ img {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
   padding-top: 50px;
 }
 @media (min-width: 768px) {
   .c-mail-system .c-page-wrapper {
-    -ms-flex-pack: center;
-        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
   }
 }
 @media (min-width: 992px) {
@@ -1236,7 +1234,6 @@ img {
   }
 }
 .c-mail-system__inner {
-  max-width: 100%;
   margin-bottom: 30px;
   min-height: 260px;
 }
@@ -1263,7 +1260,11 @@ img {
 }
 .c-client-wishes {
   background-color: #f0f0f0;
-  overflow-x: hidden;
+}
+@media (min-width: 992px) {
+  .c-client-wishes {
+    overflow-x: hidden;
+  }
 }
 .c-client-wishes .c-page-wrapper {
   position: relative;
@@ -1272,10 +1273,14 @@ img {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
   background-color: #f0f0f0;
   padding-top: 50px;
+}
+@media (min-width: 768px) {
+  .c-client-wishes .c-page-wrapper {
+    -ms-flex-align: center;
+        align-items: center;
+  }
 }
 @media (min-width: 992px) {
   .c-client-wishes .c-page-wrapper {
@@ -1291,7 +1296,7 @@ img {
 @media (min-width: 768px) {
   .c-client-wishes__image {
     position: static;
-    height: 400px;
+    height: 380px;
   }
 }
 @media (min-width: 992px) {
@@ -1326,6 +1331,14 @@ img {
   background-image: url("/images/medal.png");
   background-position: top left;
   background-repeat: no-repeat;
+}
+.c-client-wishes__application {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .c-client-wishes__application {
+    width: 410px;
+  }
 }
 .c-how-works {
   background-color: #04a198;
@@ -1575,7 +1588,6 @@ img {
   }
 }
 .c-copyright {
-  width: 237px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1590,6 +1602,11 @@ img {
     text-align: left;
     -ms-flex-order: 1;
         order: 1;
+  }
+}
+@media (min-width: 992px) {
+  .c-copyright {
+    padding-left: 50px;
   }
 }
 .c-copyright a {
