@@ -9,13 +9,11 @@
 
 		@media (min-width: @screen-tablet) {
 			align-items: center;
-			flex-direction: column;
-			position: relative;
 		}
 
 		@media (min-width: @screen-desktop) {
-			flex-direction: row;
-			padding-top: 159px;
+			flex-direction: column;
+			position: relative;
 		}
 	}
 
@@ -36,10 +34,6 @@
 
 	&__inner {
 		min-height: 280px;
-
-		@media (min-width: @screen-desktop) {
-			min-height: 395px;
-		}
 	}
 
 	&__info {

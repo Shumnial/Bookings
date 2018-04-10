@@ -1139,16 +1139,13 @@ img {
   .c-timetable .c-page-wrapper {
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    position: relative;
   }
 }
 @media (min-width: 992px) {
   .c-timetable .c-page-wrapper {
-    -ms-flex-direction: row;
-        flex-direction: row;
-    padding-top: 159px;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    position: relative;
   }
 }
 .c-timetable__image {
@@ -1169,11 +1166,6 @@ img {
 }
 .c-timetable__inner {
   min-height: 280px;
-}
-@media (min-width: 992px) {
-  .c-timetable__inner {
-    min-height: 395px;
-  }
 }
 .c-timetable__info {
   max-width: 530px;
@@ -1296,7 +1288,7 @@ img {
 @media (min-width: 768px) {
   .c-client-wishes__image {
     position: static;
-    height: 380px;
+    height: auto;
   }
 }
 @media (min-width: 992px) {
@@ -1305,7 +1297,7 @@ img {
     width: 56%;
     bottom: 0;
     right: -190px;
-    height: auto;
+    height: 380px;
   }
 }
 @media (min-width: 1280px) {
@@ -1671,6 +1663,9 @@ img {
   width: 17px;
   height: 17px;
   margin: 0 auto;
+}
+.c-social__link:hover svg {
+  fill: #04a198;
 }
 .h-clearfix:before,
 .h-clearfix:after {
